@@ -13,7 +13,7 @@ let repoSchema = new mongoose.Schema({
 
 let Repo = mongoose.model('Repo', repoSchema);
 
-let db = mongoose.connection;
+// let db = mongoose.connection;
 
 let parseRepos = (data) => {
   let parsed = [];
@@ -48,7 +48,7 @@ let save = (data) => {
 };
 
 let get25 = (callback) => {
-  Repo.find({}, ((err, results) => {
+  Repo.find({}, null, {sort: { watchers : -1 }}, ((err, results) => {
     if (err) {
       callback(err);
     } else {
