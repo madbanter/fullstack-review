@@ -31,13 +31,6 @@ let parseRepos = (data) => {
 };
 
 let save = (data) => {
-  // TODO: Your code here
-  // This function should save a repo or repos to
-  // the MongoDB
-  // iterate through data array
-  // for each item in array
-    // create new document from model containing input
-    // save document to db
   Repo.insertMany(data).then((err, docs) => {
     if (err) {
       console.log(err);

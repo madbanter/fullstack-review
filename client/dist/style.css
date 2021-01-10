@@ -1,0 +1,11 @@
+.repo {
+  list-style: none;
+  margin: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
