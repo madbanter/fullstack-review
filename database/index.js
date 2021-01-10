@@ -12,12 +12,14 @@ let repoSchema = mongoose.Schema({
 
 let Repo = mongoose.model('Repo', repoSchema);
 
-let save = (/* TODO */) => {
+let save = (repos) => {
   // TODO: Your code here
   // This function should save a repo or repos to
   // the MongoDB
-  // create new document from model containing input
-  // save document to db
+  // iterate through data array
+  // for each item in array
+    // create new document from model containing input
+    // save document to db
 }
 
 module.exports.save = save;
