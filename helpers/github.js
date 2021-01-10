@@ -16,7 +16,6 @@ let getReposByUsername = (username, callback) => {
   };
   axios.get(options.url, options)
   .then((data) => {
-    console.log(data.data)
     callback(null, data.data)
   })
   .catch(err => callback(err));
