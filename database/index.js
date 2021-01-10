@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/fetcher', {useMongoClient: true})
 let repoSchema = new mongoose.Schema({
   name: String,
   owner: String,
-  html_url: String,
+  html_url: {type: String, unique: true},
   updated_at: Date,
   watchers: Number
 });
