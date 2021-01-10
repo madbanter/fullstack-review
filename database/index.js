@@ -48,7 +48,7 @@ let save = (data) => {
 };
 
 let get25 = (callback) => {
-  Repo.find({}, null, {sort: { watchers : -1 }}, ((err, results) => {
+  Repo.find({}, null, {sort: { watchers : -1 }, limit: 25}, ((err, results) => {
     if (err) {
       callback(err);
     } else {
